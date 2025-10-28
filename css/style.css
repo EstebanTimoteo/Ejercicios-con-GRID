@@ -1,0 +1,323 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+header.principal {
+  text-align: center;
+  background-color: blueviolet;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer div {
+  text-align: end;
+}
+
+h1.principal {
+  font-size: 80px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  color: red;
+  padding: 40px;
+  margin-top: 0;
+}
+
+ul.inicio a {
+  display: block;
+  text-decoration: none;
+  font-size: 50px;
+  color: white;
+  padding: 50px;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 10px;
+  padding: 0;
+}
+ul li {
+  background-color: blueviolet;
+  padding: 0px;
+}
+
+header.primero {
+  display: flex;
+  background-color: aliceblue;
+}
+
+header.primero div {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  font-size: 30px;
+}
+
+header.primero h1 {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  font-size: 50px;
+}
+
+header.primero div a {
+  display: block;
+  padding: 50px;
+}
+
+/* Ejercicio 1*/
+div.contenedor {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  gap: 10px;
+  width: 90%;
+  background: #ff5252;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 82, 82, 1) 0%,
+    rgba(147, 87, 199, 1) 100%
+  );
+}
+
+div.contenedor div {
+  text-align: center;
+  align-content: center;
+  padding: 10px;
+  background-color: orange;
+  font-size: 40px;
+  border: 2px dashed black;
+}
+
+main.segundo {
+  display: flex;
+  flex-direction: column; /* Organizar los elementos en una columna */
+  justify-content: flex-start; /* Alinear al principio del contenedor */
+  align-items: center; /* Centrar los elementos horizontalmente */
+  width: 100%; /* Opcional: asegurar que ocupe todo el ancho */
+  gap: 10px; /* Establecer un espacio entre los divs, si lo deseas */
+}
+
+div.contenedor div:nth-child(8) {
+  grid-area: 1 / 7 / span 1 / span 2;
+  background-color: #ff5252;
+}
+
+div.contenedor div:nth-child(9) {
+  grid-area: 1 / 9 / span 2 / span 1;
+  background-color: aqua;
+}
+
+div.contenedor div:nth-child(6) {
+  grid-area: 2 / 1 / span 1 / span 6;
+  background-color: rgb(0, 204, 255);
+}
+
+div.contenedor div:nth-child(12) {
+  grid-area: 3 / 1 / span 1 / span 6;
+  background-color: rgb(0, 204, 255);
+}
+
+div.contenedor div:nth-child(16) {
+  grid-area: 3 / 8 / span 1 / span 2;
+  background-color: #ff5252;
+}
+
+div.contenedor div:nth-child(18) {
+  grid-area: 4 / 5 / span 2 / span 6;
+  background-color: lime;
+}
+
+div.contenedor div:nth-child(24) {
+  grid-area: 5 / 2 / span 1 / span 2;
+  background-color: #ff5252;
+}
+
+div.contenedor div:nth-child(27) {
+  grid-area: 6 / 2 / span 2 / span 1;
+  background-color: aqua;
+}
+
+div.contenedor div:nth-child(32) {
+  grid-area: 7 / 3 / span 1 / span 2;
+  background-color: #ff5252;
+}
+
+div.contenedor div:nth-child(30) {
+  grid-area: 6 / 5 / span 1 / span 6;
+  background-color: rgb(0, 204, 255);
+}
+
+/*Ejercicio 2*/
+
+body.cuerpo {
+  background: #ff5252;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 82, 82, 1) 0%,
+    rgba(147, 87, 199, 1) 100%
+  );
+}
+
+div.arriba {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 40%;
+  width: 95%;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+div.arriba div.up1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div.arriba div {
+  border: 1px solid black;
+}
+
+div.arriba div.up1 {
+  grid-area: 1 / 1 / span 2 / span 1;
+}
+
+div.arriba div ~ div {
+  background-color: orange;
+}
+
+div.arriba div:not(:first-child) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+div.medio1 {
+  width: 95%; /* Ocupa el 90% del ancho de la ventana */
+  margin: 0 auto; /* Centra el div */
+}
+
+ul.navedio {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+  justify-content: space-around; /* Distribuye los elementos uniformemente */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.navedio a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  background-color: orange;
+  padding: 10px;
+  font-size: 30px;
+}
+
+ul.navedio li {
+  flex-grow: 1; /* Permite que el elemento crezca para ocupar espacio extra */
+  flex-basis: 150px; /* Define un tamaño base para cada elemento */
+  min-width: 150px; /* Asegura un ancho mínimo para evitar que se vean muy estrechos */
+  text-align: center;
+  margin: 5px;
+}
+
+div.medio2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+  width: 95%;
+}
+
+div.medio2 div {
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+div.medio2 div img {
+  width: 25%;
+  height: 35%;
+}
+
+article.articulo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 95%;
+  height: auto;
+  border: 1px solid black;
+  background-color: white;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+}
+
+article.articulo img.arti {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div.linea {
+  display: flex;
+  gap: 20px;
+}
+
+div.linea .izquierdo,
+div.linea .derecho {
+  width: 615px;
+  height: 25px;
+}
+
+div.linea .izquierdo {
+  background-image: linear-gradient(to left, orange 0%, rgba(0, 114, 255, 0));
+}
+
+div.linea .derecho {
+  background-image: linear-gradient(
+    to right,
+    orange 0%,
+    rgba(147, 87, 199, 1) 100%
+  );
+}
+
+div.linea div:nth-child(2) {
+  font-size: 20px;
+}
+
+aside.pie {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  width: 95%;
+  gap: 10px;
+}
+
+aside.pie img {
+  width: 100%;
+  height: 100%;
+}
+
